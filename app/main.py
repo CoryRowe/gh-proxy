@@ -14,7 +14,7 @@ from urllib3.exceptions import (
 # config
 # 分支文件使用jsDelivr镜像的开关，0为关闭，默认关闭
 jsdelivr = 0
-size_limit = 1024 * 1024 * 1024 * 999  # 允许的文件大小，默认999GB，相当于无限制了 https://github.com/hunshcn/gh-proxy/issues/8
+size_limit = 1024 * 1024 * 1024 * 999  # 允许的文件大小，默认999GB，相当于无限制了 https://github.com/CoryRowe/gh-proxy/issues/
 
 """
   先生效白名单再匹配黑名单，pass_list匹配到的会直接302到jsdelivr而忽略设置
@@ -33,7 +33,7 @@ pass_list = '''
 
 HOST = '127.0.0.1'  # 监听地址，建议监听本地然后由web服务器反代
 PORT = 80  # 监听端口
-ASSET_URL = 'https://hunshcn.github.io/gh-proxy'  # 主页
+ASSET_URL = 'https://githubspeed.onrender.com'  # 主页
 
 white_list = [tuple([x.replace(' ', '') for x in i.split('/')]) for i in white_list.split('\n') if i]
 black_list = [tuple([x.replace(' ', '') for x in i.split('/')]) for i in black_list.split('\n') if i]
