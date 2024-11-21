@@ -9,7 +9,7 @@ github release、archive以及项目文件的加速项目，支持clone，有Clo
 - python版本支持进行文件大小限制，超过设定返回原地址 [issue #8](https://github.com/hunshcn/gh-proxy/issues/8)
 
 - python版本支持特定user/repo 封禁/白名单 以及passby [issue #41](https://github.com/hunshcn/gh-proxy/issues/41)
-------
+---
 
 ### 使用
 
@@ -37,7 +37,7 @@ github release、archive以及项目文件的加速项目，支持clone，有Clo
 
 - gist：https://gist.githubusercontent.com/cielpy/351557e6e465c12986419ac5a4dd2568/raw/cmd.py
 
-
+---
 ### CF worker版本部署
 
 首页：https://workers.cloudflare.com
@@ -50,7 +50,7 @@ github release、archive以及项目文件的加速项目，支持clone，有Clo
 
 `PREFIX`是前缀，默认（根路径情况为"/"），如果自定义路由为example.com/gh/*，请将PREFIX改为 '/gh/'，注意，少一个杠都会错！
 
-
+---
 ### Python版本部署
 
 #### Docker部署
@@ -77,18 +77,22 @@ docker run -d --name="gh-proxy-py" \
 if 'Transfer-Encoding' in headers:
     headers.pop('Transfer-Encoding')
 ```
-
+---
 ### 注意
 
 python版本的机器如果无法正常访问github.io会启动报错，请自行修改静态文件url
 
 python版本默认走服务器（2021.3.27更新）
 
+---
+
 ## Cloudflare Workers计费
 
 到 `overview` 页面可参看使用情况。免费版每天有 10 万次免费请求，并且有每分钟1000次请求的限制。
 
 如果不够用，可升级到 $5 的高级版本，每月可用 1000 万次请求（超出部分 $0.5/百万次请求）。
+
+---
 
 ### 感谢 hunshcn
 源版来自 [hunshcn/gh-proxy](https://github.com/hunshcn/gh-proxy)
